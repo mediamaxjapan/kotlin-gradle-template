@@ -2,7 +2,7 @@ plugins {
   base
   application
   kotlin("jvm")
-  id("com.github.johnrengelman.shadow")
+  id(Deps.shadow)
 }
 
 repositories {
@@ -12,11 +12,13 @@ repositories {
 
 dependencies {
   implementation(project(":core"))
-  implementation(kotlin("stdlib-jdk8"))
-  testImplementation("org.spekframework.spek2:spek-dsl-jvm:2.0.5")
-  testRuntimeOnly("org.spekframework.spek2:spek-runner-junit5:2.0.5")
+  implementation(kotlin(Deps.stdlib))
+  testImplementation(Deps.junit)
+  testImplementation(Deps.spek)
+  testImplementation(Deps.hamkrest)
+  testRuntimeOnly(Deps.spekRunner)
   // spek requires kotlin-reflect, can be omitted if already in the classpath
-  testRuntimeOnly("org.jetbrains.kotlin:kotlin-reflect:1.3.31")
+  testRuntimeOnly(Deps.kotlinReflect)
 }
 
 // shadowJar に反映される
@@ -28,18 +30,14 @@ tasks {
   test {
     useJUnitPlatform {
       // 二つとも指定しないとテストが走らない、片方だけではダメ
-      includeEngines("junit5", "spek2")
+      includeEngines(*Deps.junitEngines)
     }
     testLogging {
-      events("passed", "skipped", "failed")
+      events(*Deps.testEvents)
     }
   }
   compileKotlin {
-    kotlinOptions.jvmTarget = "11"
-  }
-  shadowJar {
-    // slf4j, jdbc driver など Class.forName は対象外にしないといけない
-    minimize()
+    kotlinOptions.jvmTarget = Deps.jvmTarget
   }
 }
 
