@@ -4,8 +4,8 @@ buildscript {
     jcenter()
   }
   dependencies {
-    classpath(kotlin("gradle-plugin", version = "1.3.31"))
-    classpath("com.github.jengelman.gradle.plugins:shadow:5.0.0")
+    classpath(kotlin("gradle-plugin", version = Deps.kotlinVersion))
+    classpath(Deps.shadowPath)
   }
 }
 
