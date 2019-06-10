@@ -17,7 +17,6 @@ dependencies {
   implementation(Deps.inject)
   implementation(Deps.joobyKotlin)
   implementation(Deps.joobyNetty)
-  implementation(Deps.joobyAssets)
   implementation(Deps.joobyApitool)
 
   implementation(Deps.joobyJackson)

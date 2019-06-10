@@ -19,7 +19,6 @@ object Deps {
   const val joobyPlugin = "org.jooby:jooby-gradle-plugin:$joobyVersion"
   const val joobyKotlin = "org.jooby:jooby-lang-kotlin:$joobyVersion"
   const val joobyNetty = "org.jooby:jooby-netty:$joobyVersion"
-  const val joobyAssets = "org.jooby:jooby-assets:$joobyVersion"
   const val joobyApitool = "org.jooby:jooby-apitool:$joobyVersion"
   const val joobyJackson = "org.jooby:jooby-jackson:$joobyVersion"
   const val jacksonKotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.9"
