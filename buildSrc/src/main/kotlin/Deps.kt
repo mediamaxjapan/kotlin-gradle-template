@@ -21,6 +21,7 @@ object Deps {
   const val joobyNetty = "org.jooby:jooby-netty:$joobyVersion"
   const val joobyAssets = "org.jooby:jooby-assets:$joobyVersion"
   const val joobyApitool = "org.jooby:jooby-apitool:$joobyVersion"
+  const val joobyJackson = "org.jooby:jooby-jackson:$joobyVersion"
 
   val junitEngines = arrayOf("junit5", "spek2")
   val testEvents = arrayOf("passed", "skipped", "failed")

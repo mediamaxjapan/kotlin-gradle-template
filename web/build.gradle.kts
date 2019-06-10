@@ -19,6 +19,7 @@ dependencies {
   implementation(Deps.joobyNetty)
   implementation(Deps.joobyAssets)
   implementation(Deps.joobyApitool)
+  implementation(Deps.joobyJackson)
   testImplementation(Deps.junit)
   testImplementation(Deps.spek)
   testImplementation(Deps.hamkrest)
