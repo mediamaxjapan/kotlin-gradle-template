@@ -5,6 +5,7 @@ buildscript {
   }
   dependencies {
     classpath(kotlin("gradle-plugin", version = Deps.kotlinVersion))
+    classpath(Deps.joobyPlugin)
     classpath(Deps.shadowPath)
   }
 }

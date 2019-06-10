@@ -8,4 +8,4 @@
  */
 
 rootProject.name = "kotlin-gradle-example"
-include("cli", "core")
+include("core", "web")
