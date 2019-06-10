@@ -22,6 +22,8 @@ object Deps {
   const val joobyAssets = "org.jooby:jooby-assets:$joobyVersion"
   const val joobyApitool = "org.jooby:jooby-apitool:$joobyVersion"
   const val joobyJackson = "org.jooby:jooby-jackson:$joobyVersion"
+  const val jacksonKotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.9"
+
 
   // for swagger on JDK11
   // java.lang.NoClassDefFoundError: javax/xml/bind/annotation/XmlRootElement

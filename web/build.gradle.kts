@@ -19,7 +19,9 @@ dependencies {
   implementation(Deps.joobyNetty)
   implementation(Deps.joobyAssets)
   implementation(Deps.joobyApitool)
+
   implementation(Deps.joobyJackson)
+  runtime(Deps.jacksonKotlin)
 
   // fix swagger error on Java 11
   runtime(Deps.jaxbApi)
