@@ -20,6 +20,12 @@ dependencies {
   implementation(Deps.joobyAssets)
   implementation(Deps.joobyApitool)
   implementation(Deps.joobyJackson)
+
+  // fix swagger error on Java 11
+  runtime(Deps.jaxbApi)
+  runtime(Deps.jaxbCore)
+  runtime(Deps.jaxbImpl)
+
   testImplementation(Deps.junit)
   testImplementation(Deps.spek)
   testImplementation(Deps.hamkrest)

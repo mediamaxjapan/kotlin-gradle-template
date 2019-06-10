@@ -1,9 +1,5 @@
 package controllers
 
-import org.jooby.MediaType
-import org.jooby.Result
-import org.jooby.Results
-import org.jooby.json.JacksonView
 import org.jooby.mvc.GET
 import org.jooby.mvc.Path
 import org.jooby.mvc.Produces
@@ -15,21 +11,26 @@ import javax.inject.Singleton
 class HelloController {
 
   @GET
-  fun index(): Result {
-    return Results.ok("Hello, index").type(MediaType.plain)
+  fun index(): String {
+    return "Hello, Jooby!"
   }
 
   @GET
   @Path("/kotlin")
-  fun kotlin(): Result {
-    return Results.ok("Hello, Kotlin!").type(MediaType.plain)
+  fun kotlin(): String {
+    return "Hello, kotlin"
   }
 
+  /**
+   * ログインコンテキストを知る
+   *
+   * @return ログイン中のユーザー情報
+   */
   @GET
   @Produces("application/json")
-  @Path("/json")
-  fun json(): JacksonView<Person> {
-    return JacksonView(Person::class.java, Person("onda", 41))
+  @Path("/me")
+  fun me(): Person {
+    return Person("onda", 41)
   }
 
 }

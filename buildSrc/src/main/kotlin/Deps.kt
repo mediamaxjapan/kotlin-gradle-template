@@ -23,6 +23,13 @@ object Deps {
   const val joobyApitool = "org.jooby:jooby-apitool:$joobyVersion"
   const val joobyJackson = "org.jooby:jooby-jackson:$joobyVersion"
 
+  // for swagger on JDK11
+  // java.lang.NoClassDefFoundError: javax/xml/bind/annotation/XmlRootElement
+  // https://crunchify.com/java-11-and-javax-xml-bind-jaxbcontext/
+  const val jaxbApi = "javax.xml.bind:jaxb-api:2.3.1"
+  const val jaxbCore = "com.sun.xml.bind:jaxb-core:2.3.0.1"
+  const val jaxbImpl = "com.sun.xml.bind:jaxb-impl:2.3.1"
+
   val junitEngines = arrayOf("junit5", "spek2")
   val testEvents = arrayOf("passed", "skipped", "failed")
 
