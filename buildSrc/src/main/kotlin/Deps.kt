@@ -1,6 +1,6 @@
 object Deps {
 
-  const val kotlinVersion = "1.3.31"
+  const val kotlinVersion = "1.3.40"
   const val jvmTarget = "11"
 
   const val shadowPath = "com.github.jengelman.gradle.plugins:shadow:5.0.0"
