@@ -6,16 +6,18 @@ object Deps {
   const val shadowPath = "com.github.jengelman.gradle.plugins:shadow:5.0.0"
   const val shadow = "com.github.johnrengelman.shadow"
 
+  const val spekVersion = "2.0.6"
+
   const val stdlib = "stdlib-jdk8"
   const val junit = "org.junit.jupiter:junit-jupiter:5.4.2"
   const val hamkrest = "com.natpryce:hamkrest:1.7.0.0"
-  const val spek = "org.spekframework.spek2:spek-dsl-jvm:2.0.5"
-  const val spekRunner = "org.spekframework.spek2:spek-runner-junit5:2.0.5"
-  const val kotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:1.3.31"
+  const val spek = "org.spekframework.spek2:spek-dsl-jvm:${spekVersion}"
+  const val spekRunner = "org.spekframework.spek2:spek-runner-junit5:${spekVersion}"
+  const val kotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}"
 
   const val inject = "javax.inject:javax.inject:1"
 
-  private const val joobyVersion = "1.6.2"
+  private const val joobyVersion = "1.6.3"
   const val joobyPlugin = "org.jooby:jooby-gradle-plugin:$joobyVersion"
   const val joobyKotlin = "org.jooby:jooby-lang-kotlin:$joobyVersion"
   const val joobyNetty = "org.jooby:jooby-netty:$joobyVersion"
